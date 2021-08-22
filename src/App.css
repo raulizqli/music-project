@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+  font-family: tahoma;
+  height: 100vh;
+  background-image: url(https://previews.123rf.com/images/relato/relato1603/relato160300007/53255780-ilustraci%C3%B3n-de-notas-musicales-con-corazones.jpg);
+  background-size: cover;
+  background-position: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.row-padding
+{
+	padding-top: 20px;
+}
+
+.main-box
+{
+	background-color: #f7f5ec;
+	opacity: 0.9;
+}
+
+.name
+{
+	overflow-y: hidden;
+	max-height: 30px;
+	text-overflow: ellipsis;
+	padding: 0px 5px 0px;
+}
+
+.fancy-effect {
+	background-color: #f7f5ec;
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.fancy-effect .picture {
+  display: inline-block;
+  height: fit-content;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.fancy-effect .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.fancy-effect:hover .picture::before {
+  height: 100%;
+}
+
+.fancy-effect .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.col-less-padding
+{
+	
+}
+
+.fancy-effect .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+	transition: all 0.9s ease 0s;
+}
+
+.fancy-effect:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.fancy-effect .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.fancy-effect .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.fancy-effect:hover .social {
+  bottom: 0;
+}
+
+.fancy-effect .social li {
+  display: inline-block;
+}
+
+.fancy-effect .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
   color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.fancy-effect-blue .social li a:hover {
+  color: #1369ce;
+  background-color: #f7f5ec;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fancy-effect-blue .picture::before, .fancy-effect-blue .picture::after, .fancy-effect-blue .social {
+	background-color: #1369ce;
+}
+
+.fancy-effect-green .social li a:hover {
+  color: #357560;
+  background-color: #f7f5ec;
+}
+
+.fancy-effect-green .picture::before, .fancy-effect-green .picture::after, .fancy-effect-green .social {
+	background-color: #357560;
+}
+
+.fancy-effect-pink .social li a:hover {
+  color: #ee8070;
+  background-color: #f7f5ec;
+}
+
+.fancy-effect-pink .picture::before, .fancy-effect-pink .picture::after, .fancy-effect-pink .social {
+	background-color: #ee8070;
+}
+
+.fancy-effect-orange .social li a:hover {
+  color: #ea8933;
+  background-color: #f7f5ec;
+}
+
+.fancy-effect-orange .picture::before, .fancy-effect-orange .picture::after, .fancy-effect-orange .social {
+	background-color: #ea8933;
+}
+
+.fancy-effect-red .social li a:hover {
+  color: #ba3f24;
+  background-color: #f7f5ec;
+}
+
+.fancy-effect-red .picture::before, .fancy-effect-red .picture::after, .fancy-effect-red .social {
+	background-color: #ba3f24;
 }
